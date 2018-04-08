@@ -1,11 +1,10 @@
 import React from 'react'
 
 const videoDetail = (props) => {
-    if(props.video)
-        console.log("VIDEO" + props.video.id.videoId)
     if(!props.video){
         return <div className = 'video-detail'> Loading..... </div>
     }
+    
     const videoId = props.video.id.videoId
     const videoUrl = `https://www.youtube.com/embed/${videoId}`
     const title = props.video.snippet.title
